@@ -1,12 +1,10 @@
 import React from 'react';
 import { withAuthorization } from '../Session';
+import Dashboard from "../dashboard/Dashboard"
 
 
 const Home = () => (
-    <div>
-        <h1>Hey man!</h1>
-        <p>The Home Page is accessible by every signed in user.</p>
-    </div>
+    <Dashboard/>
 );
 const condition = authUser => !!authUser;
  

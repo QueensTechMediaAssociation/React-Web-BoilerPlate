@@ -16,7 +16,9 @@ const Navigation = () => (
   );
 
 const NavigationAuth = () => (
-<header>
+<div>
+</div>
+  /* <header>
   <div>
     <nav>
         <ul class="leftNav">
@@ -34,7 +36,7 @@ const NavigationAuth = () => (
         </ul>
     </nav>
   </div>
-</header>
+</header> */
 );
 
 const NavigationNonAuth = () => (

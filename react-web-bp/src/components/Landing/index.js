@@ -1,9 +1,13 @@
 import React from 'react';
+import { withAuthorization } from '../Session';
 
-const Landing = () => (
-    <div>
-        <h1>Welcome to the QTMA React Web App Boiler Plate</h1>
-    </div>
-);
-
-export default Landing;
+function Landing() {
+    return (
+        <main>
+            <div></div>
+        </main>
+    );
+  }
+const condition = authUser => !!authUser;
+ 
+export default withAuthorization(condition)(Landing);

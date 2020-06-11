@@ -4,6 +4,7 @@ import { compose } from 'recompose';
 
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
+import Button from '@material-ui/core/Button';
 
 const SignupPage = () => (
     <div>
@@ -96,9 +97,9 @@ class SignupFormBase extends Component {
                 />
                 <br/>
                 <br/>
-                <button disabled={isInvalid} type="submit">
+                <Button disabled={isInvalid} type="submit">
                     Sign Up
-                </button>
+                </Button>
             
                 {error && <p>{error.message}</p>}
             </form>

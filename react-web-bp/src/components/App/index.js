@@ -7,6 +7,7 @@ import LandingPage from '../Landing';
 import SignupPage from '../Signup';
 import LoginPage from '../Login';
 import HomePage from '../Home';
+import ProfilePage from '../Profile'
 
 import * as ROUTES from '../../constants/routes';
 import { app } from 'firebase';
@@ -18,15 +19,13 @@ import { withAuthentication } from '../Session';
 
 const App = () => (
     <Router>
-        <div>
             <Navigation />
             <hr />
-            <Route exact path={ROUTES.LANDING} component={LandingPage} />
-            <Route path={ROUTES.SIGNUP} component={SignupPage} />
+            <Route exact path={ROUTES.LOGIN} component={LandingPage} />
             <Route path={ROUTES.LOGIN} component={LoginPage} />
-
+            <Route path={ROUTES.SIGNUP} component={SignupPage} />
             <Route path={ROUTES.HOME} component={HomePage} />
-        </div>
+            <Route path={ROUTES.PROFILE} component={ProfilePage} />
     </Router>
 );
 

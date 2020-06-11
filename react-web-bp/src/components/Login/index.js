@@ -5,6 +5,7 @@ import { compose } from 'recompose';
 import { SignupLink } from '../Signup';
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
+import Button from '@material-ui/core/Button';
 
 
 
@@ -73,9 +74,9 @@ class SignInFormBase extends Component {
                 />
                 <br/>
                 <br/>
-                <button disabled={isInvalid} type="submit">
-                    Sign In
-                </button>
+                <Button disabled={isInvalid} variant="outlined" type="submit">
+                    Log In
+                </Button>
                 {error && <p>{error.message}</p>}
             </form>
         );

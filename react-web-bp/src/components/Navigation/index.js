@@ -8,30 +8,11 @@ import IconButton from "@material-ui/core/IconButton";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
-import MenuIcon from "@material-ui/icons/Menu";
-import Container from "@material-ui/core/Container";
-import {
-  makeStyles,
-  ThemeProvider,
-  createMuiTheme,
-} from "@material-ui/core/styles";
-import Grid from "@material-ui/core/Grid";
-import Paper from "@material-ui/core/Paper";
 import "../Firebase/firebase";
-import { useHistory, Redirect } from "react-router-dom";
 import useStyles from "../../styles/styles";
-
-const theme = createMuiTheme({
-  mixins: {
-    denseToolbar: {
-      minHeight: 40,
-    },
-  },
-});
 
 //When Authenticated
 const NavigationAuth = (props) => {
-  const history = useHistory();
   const classes = useStyles();
 
   return (
@@ -62,20 +43,13 @@ const NavigationAuth = (props) => {
         </IconButton>
         <SignOutButton />
       </Toolbar>
-      <div className={classes.offset} />
     </>
   );
 };
 
-// function goHome(props) {
-//   const history = useHistory();
-//   this.props.history.push(ROUTES.HOME);
-// }
-
 //When Not Authenticated
 const NavigationNonAuth = (props) => {
   const classes = useStyles();
-  const history = useHistory();
   return (
     <>
       <Toolbar
@@ -85,11 +59,8 @@ const NavigationNonAuth = (props) => {
             "linear-gradient(45deg, rgba(0,114,255,1) 0%, rgba(11,141,255,1) 100%)",
         }}
       >
-        <Typography variant="h5" className={classes.title}>
-          QTMA Web App Boiler Plate
-        </Typography>
         <Button variant="outlined" component={Link} to={ROUTES.LOGIN}>
-          Log In
+          QTMA
         </Button>
       </Toolbar>
 

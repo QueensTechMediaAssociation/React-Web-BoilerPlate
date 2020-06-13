@@ -4,9 +4,6 @@ const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
   },
-  root: {
-    flexGrow: 1,
-  },
   toolbar: {
     minHeight: 10,
   },
@@ -19,12 +16,6 @@ const useStyles = makeStyles((theme) => ({
   },
   appBar: {
     minHeight: 10,
-  },
-  menuButton: {
-    marginRight: 36,
-  },
-  title: {
-    flexGrow: 1,
   },
   appBarSpacer: theme.mixins.toolbar,
   content: {

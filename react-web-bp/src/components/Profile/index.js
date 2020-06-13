@@ -1,70 +1,67 @@
-import React from 'react';
-import { withAuthorization } from '../Session';
-import clsx from 'clsx';
+import React from "react";
+import { withAuthorization } from "../Session";
+// nodejs library that concatenates classes
+import classNames from "classnames";
 
-import Container from '@material-ui/core/Container';
-import Card from '@material-ui/core/Card';
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
-import Box from '@material-ui/core/Box';
-import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import AccountCircle from '@material-ui/icons/AccountCircle';
-import Avatar from '@material-ui/core/Avatar';
+//custom components
+import Parallax from "../MaterialKit/Parallax/Parallax.js";
+import Button from "../MaterialKit/CustomButtons/Button.js";
+import GridContainer from "../MaterialKit/Grid/GridContainer.js";
+import GridItem from "../MaterialKit/Grid/GridItem.js";
 
+import styles from "../../styles/material-kit-react/profilePage.js";
+import { makeStyles } from "@material-ui/core";
 
+import profile from "./../../assets/img/christian.jpg";
 
-const drawerWidth = 240;
+const useStyles = makeStyles(styles);
 
-const useStyles = makeStyles((theme) => ({
-  avatar: {
-    width: theme.spacing(12),
-    height: theme.spacing(12),
-    backgroundColor: "red",
-    alignItems: "center",
-    justifyContent: "center"
-  },
-  paper: {
-    padding: theme.spacing(2),
-    display: 'flex',
-    overflow: 'auto',
-    flexDirection: 'column',
-  },
-  center: {
-    
-  }
-    
-  }));
+function ProfilePage(props) {
+  const classes = useStyles();
+  const imageClasses = classNames(
+    classes.imgRaised,
+    classes.imgRoundedCircle,
+    classes.imgFluid
+  );
+  return (
+    <div>
+      <Parallax
+        small
+        filter
+        image={require("../../assets/img/profile-bg.jpg")}
+      />
+      <div className={classNames(classes.main, classes.mainRaised)}>
+        <div>
+          <div className={classes.container}>
+            <GridContainer justify="center">
+              <GridItem xs={12} sm={12} md={6}>
+                <div className={classes.profile}>
+                  <div>
+                    <img src={profile} alt="..." className={imageClasses} />
+                  </div>
+                  <div className={classes.name}>
+                    <h3 className={classes.title}>James Huffington</h3>
+                    <h6>Developer</h6>
+                    <Button justIcon link className={classes.margin5}>
+                      <i className={"fab fa-twitter"} />
+                    </Button>
+                    <Button justIcon link className={classes.margin5}>
+                      <i className={"fab fa-instagram"} />
+                    </Button>
+                    <Button justIcon link className={classes.margin5}>
+                      <i className={"fab fa-facebook"} />
+                    </Button>
+                  </div>
+                </div>
+              </GridItem>
+            </GridContainer>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
+const condition = (authUser) => !!authUser;
 
-
-function Profile() {
-
-    const classes = useStyles();
-    const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
-    return (
-      <main className={classes.content}>
-      <div className={classes.appBarSpacer} />
-      <Grid container justify="center">
-        <div>helko</div>
-      </Grid>
-      <Container maxWidth="lg" className={classes.container}>
-      <Card container spacing={2}>
-          {/* Recent Orders */}
-          
-          <Paper className={classes.paper}>
-              <Avatar className={classes.avatar}>Q</Avatar>
-              <div>Hello World</div>
-          </Paper>
-      </Card>
-      </Container>
-  </main>
-    );
-  }
-const condition = authUser => !!authUser;
- 
-export default withAuthorization(condition)(Profile);
+export default withAuthorization(condition)(ProfilePage);

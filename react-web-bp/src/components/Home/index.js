@@ -41,15 +41,10 @@ function Home() {
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
   return (
     <main className={classes.content}>
-      <div className={classes.appBarSpacer} />
-
       <Container maxWidth="lg" className={classes.container}>
         <Grid item xs={3}>
           <Typography variant="h3" className="">
-            Dashboard
-          </Typography>
-          <Typography variant="h6" style={{}}>
-            Example dashboard.
+            Dashboard.
           </Typography>
         </Grid>
         <Grid container spacing={3}>

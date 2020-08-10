@@ -1,4 +1,4 @@
-## Environment Setup
+## Environment Setup :evergreen_tree:
 - This project was bootstrapped with [Create React App](https://reactjs.org/docs/create-a-new-react-app.html).
 - Please download and use [VSCode](https://code.visualstudio.com/) as your IDE
     -  Download the following extensions:

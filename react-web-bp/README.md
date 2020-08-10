@@ -1,4 +1,4 @@
-# Environment Setup
+## Environment Setup
 - This project was bootstrapped with [Create React App](https://reactjs.org/docs/create-a-new-react-app.html).
 - Please download and use [VSCode](https://code.visualstudio.com/) as your IDE
     -  Download the following extensions:
@@ -8,7 +8,7 @@
 - Make sure you have [Git](https://git-scm.com/) installed on your machine
 - Download [NPM](https://www.npmjs.com/get-npm)
 
-# Get Started With The Template
+## Get Started With The Template
 - Clone the web app template
 `git clone https://github.com/QueensTechMediaAssociation/React_Web_BoilerPlate.git`
 
@@ -37,7 +37,7 @@ In Terminal:
   - Copy the firebaseConfig variable presented to you in the firebase console
   - Navigate to /src/components/Firebase/firebase.js and replace the config variable with your projects specific info
 
-# Add your project to GitHub
+## Add your project to GitHub
 - Add, commit and push the template to your teams repository
 ```sh
     git add --all
@@ -45,7 +45,7 @@ In Terminal:
     git push
 ```
 
-# Learn More
+## Learn More
 This boiler plate was made using this [tutorial](https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial#react-router-for-firebase-auth), refer to it for any implementation questions.
 
 Check out the [React documentation](https://reactjs.org/) to learn more.
